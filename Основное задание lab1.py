@@ -25,3 +25,8 @@ for i in table[1:]:
 print('Перечень всех тегов без повторений:')
 for i in a:
     print(i)
+table = table[1:]
+table.sort(key=lambda i: i[8], reverse=True)
+print('Самые популярные 20 книг')
+for i in table[:20]:
+    print(i[1])
