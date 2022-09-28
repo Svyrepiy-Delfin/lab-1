@@ -18,3 +18,10 @@ with open('books.txt', 'w') as file:
     for i, note in enumerate(table[112:132]):
         stroka = str(i + 1) + ' ' + note[3] + '. ' + note[1] + ' - ' + note[6][6:10] + '\n'
         file.write(stroka)
+a = set()
+for i in table[1:]:
+    for j in i[12].split('#')[1:]:
+        a.add(j.strip())
+print('Перечень всех тегов без повторений:')
+for i in a:
+    print(i)
